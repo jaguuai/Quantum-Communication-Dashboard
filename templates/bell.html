@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bell States</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bell States</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/bell">Bell States</a>
+            <a href="/entanglement">Entanglement</a>
+            <a href="/teleportation">Teleportation</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h2>Bell State Measurement Results</h2>
+        <p style="font-size: 16px; color: #555;">
+            A Bell State is a special quantum state where two qubits become entangled.
+            Measuring one qubit immediately determines the state of the other.
+        </p>
+        <h3>Measurement Results (1024 shots)</h3>
+        <pre style="font-size: 20px; background: #f0f0f0; padding: 20px; border-radius: 8px; display: inline-block;">
+{{ counts }}
+        </pre>
+        <p style="font-size: 14px; color: #777; margin-top: 10px;">
+            ✅ Results show only 00 or 11 → Qubits are perfectly entangled!
+        </p>
+        <a href="/" style="display: inline-block; margin-top: 20px; color: #0066ff; text-decoration: none;">← Back to Dashboard</a>
+    </div>
+</body>
+</html>
